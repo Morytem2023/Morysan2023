@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERMA</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+   <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div class="header">
+    <img src="logo.png" alt="Logo de la empresa" class="logo">
+    <h1>MERMA</h1>
+    <a href="Pagina%20principal.html"><i class="fas fa-home"></i> Página Principal</a>
+    <a href="Reporte%20Diario.html"><i class="fas fa-file"></i> REPORTE DIARIO</a>
+    <a href="Consumo%20de%20Papel.html"><i class="fas fa-file"></i> CONSUMO DE PAPEL</a>
+    <a href="Produccion%20Diaria%20de%20Maquinas.html"><i class="fas fa-cog"></i> PRODUCCION DIARIA DE MAQUINAS</a>
+    <a href="COMPARTIDOS.HTML"><i class="fas fa-share-alt"></i> DATOS COMPARTIDOS</a>
+</div>
+<h1>MERMA</h1>
+
+<!-- Tabla para la categoría "ONIMEX" -->
+<div class="table-container">
+    <h2>ONIMEX</h2>
+    <table class="table" id="onimex-table">
+        <thead>
+            <tr>
+            <th>FILA</th>
+            <th>FECHA</th>
+            <th>MAQUINA</th>
+            <th>TRABAJADOR</th>
+            <th>TURNO</th>
+            <th>DESCRIPCION(CLIENTE)</th>
+            <th>PRODUCCION</th>
+            <th>MERMA</th>
+            <th>%</th>
+            <th>GRAMAJE	ANCHO</th>
+            <th>REPETICION</th>
+            <th>Kg Sin Merma</th>
+            <th>Kg Totales</th>
+            <th>MERMA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="onimex_fecha_1" placeholder="Fecha"></td>
+                <td><input type="text" name="onimex_maquina_1" placeholder="Maquina"></td>
+                <td><input type="text" name="onimex_trabajador_1" placeholder="Trabajador"></td>
+                <td><input type="text" name="onimex_turno_1" placeholder="Turno"></td>
+                <td><input type="text" name="onimex_descripcion_1" placeholder="Descripcion(Cliente)"></td>
+                <td><input type="text" name="onimex_produccion_1" placeholder="Produccion"></td>
+                <td><input type="text" name="onimex_merma_1" placeholder="Merma"></td>
+                <td><input type="text" name="onimex_%_1" placeholder="%"></td>
+                <td><input type="text" name="onimex_gramajeancho_1" placeholder="Gramaje Ancho"></td>
+                <td><input type="text" name="onimex_repeticion_1" placeholder="Repeticion"></td>
+                <td><input type="text" name="onimex_kgsinmerma_1" placeholder="Kg Sin Merma"></td>
+                <td><input type="text" name="onimex_kgtotales_1" placeholder="Kg Totales"></td>
+                <td><input type="text" name="onimex_Mermas_1" placeholder="Merma"></td>
+            </tr>
+            <!-- Repetir esta fila 99 veces -->
+            <!-- Añadir filas de forma dinámica con JavaScript -->
+        </tbody>
+    </table>
+    <button class="button" onclick="agregarFila('onimex-table')">Agregar Fila</button>
+</div>
+
+<!-- Tabla para la categoría "LA LAGUNA" -->
+<div class="table-container">
+    <h2>LA LAGUNA</h2>
+    <table class="table" id="la-laguna-table">
+        <thead>
+            <tr>
+                <th>FILA</th>
+                <th>FECHA</th>
+                <th>MAQUINA</th>
+                <th>TRABAJADOR</th>
+                <th>TURNO</th>
+                <th>DESCRIPCION(CLIENTE)</th>
+                <th>PRODUCCION</th>
+                <th>MERMA</th>
+                <th>%</th>
+                <th>GRAMAJE	ANCHO</th>
+                <th>REPETICION</th>
+                <th>Kg Sin Merma</th>
+                <th>Kg Totales</th>
+                <th>MERMA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Generar 100 filas -->
+            <!-- Puedes hacer esto manualmente o con un bucle en JavaScript -->
+            <!-- Aquí se muestra una fila de ejemplo, repite esto 99 veces -->
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="la_laguna_fecha_1" placeholder="Fecha"></td>
+                <td><input type="text" name="la_laguna_maquina_1" placeholder="Maquina"></td>
+                <td><input type="text" name="la_laguna_trabajador_1" placeholder="Trabajador"></td>
+                <td><input type="text" name="la_laguna_turno_1" placeholder="Turno"></td>
+                <td><input type="text" name="la_laguna_descripcion_1" placeholder="Descripcion(Cliente)"></td>
+                <td><input type="text" name="la_laguna_produccion_1" placeholder="Produccion"></td>
+                <td><input type="text" name="la_laguna_merma_1" placeholder="Merma"></td>
+                <td><input type="text" name="la_laguna_%_1" placeholder="%"></td>
+                <td><input type="text" name="la_laguna_gramajeancho_1" placeholder="Gramaje Ancho"></td>
+                <td><input type="text" name="la_laguna_repeticion_1" placeholder="Repeticion"></td>
+                <td><input type="text" name="la_laguna_kgsinmerma_1" placeholder="Kg Sin Merma"></td>
+                <td><input type="text" name="la_laguna_kgtotales_1" placeholder="Kg Totales"></td>
+                <td><input type="text" name="la_laguna_Mermas_1" placeholder="Merma"></td>
+            </tr>
+            <!-- Repetir esta fila 99 veces -->
+            <!-- Añadir filas de forma dinámica con JavaScript -->
+        </tbody>
+    </table>
+    <button class="button" onclick="agregarFila('la-laguna-table')">Agregar Fila</button>
+</div>
+
+<!-- Tabla para la categoría "APSA" -->
+<div class="table-container">
+    <h2>APSA</h2>
+    <table class="table" id="apsa-table">
+        <thead>
+            <tr>
+                <th>FILA</th>
+                <th>FECHA</th>
+                <th>MAQUINA</th>
+                <th>TRABAJADOR</th>
+                <th>TURNO</th>
+                <th>DESCRIPCION(CLIENTE)</th>
+                <th>PRODUCCION</th>
+                <th>MERMA</th>
+                <th>%</th>
+                <th>GRAMAJE	ANCHO</th>
+                <th>REPETICION</th>
+                <th>Kg Sin Merma</th>
+                <th>Kg Totales</th>
+                <th>MERMA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Generar 100 filas -->
+            <!-- Puedes hacer esto manualmente o con un bucle en JavaScript -->
+            <!-- Aquí se muestra una fila de ejemplo, repite esto 99 veces -->
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="apsa_fecha_1" placeholder="Fecha"></td>
+                <td><input type="text" name="apsa_maquina_1" placeholder="Maquina"></td>
+                <td><input type="text" name="apsa_trabajador_1" placeholder="Trabajador"></td>
+                <td><input type="text" name="apsa_turno_1" placeholder="Turno"></td>
+                <td><input type="text" name="apsa_descripcion_1" placeholder="Descripcion(Cliente)"></td>
+                <td><input type="text" name="apsa_produccion_1" placeholder="Produccion"></td>
+                <td><input type="text" name="apsa_merma_1" placeholder="Merma"></td>
+                <td><input type="text" name="apsa_%_1" placeholder="%"></td>
+                <td><input type="text" name="apsa_gramajeancho_1" placeholder="Gramaje Ancho"></td>
+                <td><input type="text" name="apsa_repeticion_1" placeholder="Repeticion"></td>
+                <td><input type="text" name="apsa_kgsinmerma_1" placeholder="Kg Sin Merma"></td>
+                <td><input type="text" name="apsa_kgtotales_1" placeholder="Kg Totales"></td>
+                <td><input type="text" name="apsa_Mermas_1" placeholder="Merma"></td>
+            </tr>
+            <!-- Repetir esta fila 99 veces -->
+            <!-- Añadir filas de forma dinámica con JavaScript -->
+        </tbody>
+    </table>
+    <button class="button" onclick="agregarFila('apsa-table')">Agregar Fila</button>
+</div>
+
+<!-- Botón para guardar Excel -->
+<button class="button" onclick="guardarExcel()"><i class="fas fa-file-excel"></i> Guardar Excel</button>
+
+<script>
+
+    // Define un objeto para mantener un seguimiento de las filas de cada tabla
+    const filasPorTabla = {};
+
+    function agregarFila(tableId) {
+        const table = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow(table.rows.length);
+
+        newRow.innerHTML = `<td>${table.rows.length}</td>
+                            <td><input type="text" name="${tableId}_fecha_${table.rows.length}" placeholder="Fecha"></td>
+                            <td><input type="text" name="${tableId}_maquina_${table.rows.length}" placeholder="Maquina"></td>
+                            <td><input type="text" name="${tableId}_trabajador_${table.rows.length}" placeholder="Trabajador"></td>
+                            <td><input type="text" name="${tableId}_turno_${table.rows.length}" placeholder="Turno"></td>
+                            <td><input type="text" name="${tableId}_descripcion_${table.rows.length}" placeholder="Descripcion(Cliente)"></td>
+                            <td><input type="text" name="${tableId}_produccion_${table.rows.length}" placeholder="Produccion"></td>
+                            <td><input type="text" name="${tableId}_merma_${table.rows.length}" placeholder="Merma"></td>
+                            <td><input type="text" name="${tableId}_%_${table.rows.length}" placeholder="%"></td>
+                            <td><input type="text" name="${tableId}_gramajeancho_${table.rows.length}" placeholder="Gramaje Ancho"></td>
+                            <td><input type="text" name="${tableId}_repeticion_${table.rows.length}" placeholder="Repeticion"></td>
+                            <td><input type="text" name="${tableId}_kgsinmerma_${table.rows.length}" placeholder="Kg Sin Merma"></td>
+                            <td><input type="text" name="${tableId}_kgtotales_${table.rows.length}" placeholder="Kg Totales"></td>
+                            <td><input type="text" name="${tableId}_Mermas_${table.rows.length}" placeholder="Merma"></td>`;
+        // Guarda la fila en el objeto filasPorTabla
+        if (!filasPorTabla[tableId]) {
+            filasPorTabla[tableId] = [];
+        }
+        filasPorTabla[tableId].push(newRow);
+    }
+
+    // Agregar 100 filas automáticamente al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        for (let i = 1; i <= 100; i++) {
+            agregarFila('onimex-table');
+            agregarFila('la-laguna-table');
+            agregarFila('apsa-table');
+        }
+    });
+ 
+
+    function guardarExcel() {
+        const wb = XLSX.utils.book_new();
+
+        for (const tableId in filasPorTabla) {
+            const table = document.getElementById(tableId);
+            const sheetName = tableId;
+            const ws = XLSX.utils.aoa_to_sheet([]); // Crear una hoja de cálculo vacía
+
+            const headerRow = table.querySelector('thead tr');
+            const headerData = [];
+            headerRow.querySelectorAll('th').forEach(th => {
+                headerData.push(th.innerText);
+            });
+            XLSX.utils.sheet_add_aoa(ws, [headerData], { origin: 'A1' }); // Agregar encabezados en A1
+
+            // Obtén las filas de la tabla desde el objeto filasPorTabla
+            const rows = filasPorTabla[tableId];
+            const dataToSave = [];
+
+            rows.forEach(row => {
+                const rowData = [];
+                const cells = row.querySelectorAll('input');
+                cells.forEach(cell => {
+                    rowData.push(cell.value);
+                });
+                dataToSave.push(rowData);
+            });
+
+            // Agregar todos los registros debajo de los encabezados
+            XLSX.utils.sheet_add_aoa(ws, dataToSave, { origin: 'A2' });
+
+            XLSX.utils.book_append_sheet(wb, ws, sheetName);
+        }
+
+        XLSX.writeFile(wb, 'merma.xlsx');
+    }
+</script>
+</body>
+</html>
